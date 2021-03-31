@@ -1,0 +1,53 @@
+<mat-card class="home mat-elevation-z3">
+    <mat-card-title class="title">
+        Resgistered Customers
+    </mat-card-title>
+    <mat-card-subtitle class="subtitle">
+       List of all Interested customers 
+    </mat-card-subtitle>
+</mat-card>
+
+<div class="mat-elevation-z4">
+    <mat-table [dataSource]="matDataSource" matSort matSortActive="id" matSortDirection="asc"> 
+
+      <ng-container matColumnDef="id">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>ID</mat-header-cell>
+        <mat-cell *matCellDef="let row">{{row.id}}</mat-cell>
+      </ng-container>
+  
+      <ng-container matColumnDef="name">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Name</mat-header-cell>
+        <mat-cell *matCellDef="let row">{{row.name}}</mat-cell>
+      </ng-container>
+  
+      <ng-container matColumnDef="dateOfBirth">
+        <mat-header-cell *matHeaderCellDef>Date Of Birth</mat-header-cell>
+        <mat-cell *matCellDef="let row">{{ row.dateOfBirth }}</mat-cell>
+      </ng-container>
+    
+      <ng-container matColumnDef="cpf">
+        <mat-header-cell *matHeaderCellDef>CPF</mat-header-cell>
+        <mat-cell *matCellDef="let row">{{ row.cpf }}</mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="email">
+        <mat-header-cell *matHeaderCellDef>E-Mail</mat-header-cell>
+        <mat-cell *matCellDef="let row">{{ row.email }}</mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="fone">
+        <mat-header-cell *matHeaderCellDef>Fone</mat-header-cell>
+        <mat-cell *matCellDef="let row">{{ row.fone }}</mat-cell>
+      </ng-container>
+
+   
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+    <mat-paginator #paginator [pageSizeOptions]="[5, 10, 50]">
+  </mat-paginator>
+</div>
+
+<button class="logoff-button" routerLink="/login" mat-raised-button  color="warn">
+    Logoff
+</button>

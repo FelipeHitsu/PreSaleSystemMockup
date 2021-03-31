@@ -1,0 +1,38 @@
+<mat-card>
+<mat-card-title>Register Form</mat-card-title>
+<mat-card-subtitle>Fill in the Form and we will contact you</mat-card-subtitle>
+    <form method="post" [formGroup]="formCustomer" (ngSubmit)="onSubmit()">
+
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" class="form-control" name="name" formControlName="name" id="name" formControlName="name" required>
+        </div>
+    
+        <div class="form-group">
+            <label for="dateOfBirth">Date of Birth</label>
+            <input type="date" class="form-control" name="dateOfBirth" formControlName="dateOfBirth" id="dateOfBirth" formControlName="dateOfBirth" required>
+        </div>
+      
+        <div class="form-group">
+            <label for="cpf">CPF</label>
+            <input type="text" class="form-control" cpf="cpf" formControlName="cpf" id="cpf" formControlName="cpf" required>
+        </div>
+      
+        <div class="form-group">
+          <label for="email">E-Mail</label>
+          <input type="text" class="form-control" email="email" formControlName="email" id="email" formControlName="email" required>
+        </div>
+      
+        <div class="form-group">
+            <label for="fone">Phone Number</label>
+            <input type="text" class="form-control" fone="fone" formControlName="fone" id="fone" formControlName="fone" required>
+          </div>
+    
+        <input type="submit" class="btn btn-primary mt-4" value="Register">
+        <a routerLink="/" class="btn btn-secondary mt-4 ml-2">Cancel</a>
+      
+      </form>
+   
+</mat-card>
+
+ 

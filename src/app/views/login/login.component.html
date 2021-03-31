@@ -1,0 +1,24 @@
+<mat-card>
+    <mat-card-title>Login</mat-card-title>
+    <mat-card-subtitle>Only for registered users</mat-card-subtitle>
+
+    <form>
+        <mat-form-field >
+            <input matInput placeholder="Login"
+                 login="login">
+        </mat-form-field>
+        <mat-form-field class="input-field"> 
+            <input matInput placeholder="Password"
+                 password="password">
+        </mat-form-field>
+    </form>
+
+    <button  routerLink="/table" mat-raised-button  color="primary">
+        Login
+    </button>
+    
+    <button routerLink="/" class="btn-secondary" mat-raised-button >
+        Cancel
+    </button>
+
+</mat-card>
